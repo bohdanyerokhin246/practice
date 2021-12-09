@@ -48,7 +48,8 @@ func main() {
 }
 
 func getPosts(posts Posts) Posts {
-	resp, err := http.Get("https://jsonplaceholder.typicode.com/posts?userId=7")
+	i := 3
+	resp, err := http.Get("https://jsonplaceholder.typicode.com/posts?userId=" + strconv.Itoa(i))
 	if err != nil {
 		log.Fatal(err)
 	}
